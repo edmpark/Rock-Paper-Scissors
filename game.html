@@ -6,13 +6,42 @@
 <body>
   <script>
   function computerPlay(){
-    randNum=Math.floor(Math.random()*2)
+    let randNum=Math.floor(Math.random()*2)
     if(randNum==0){
-        return 'rock'
+        return 'Rock'
     }else if(randNum==1){
-        return 'paper'
+        return 'Paper'
     }else{
-        return 'scissor'
+        return 'Scissor'
+    }
+  }
+
+  function playRound(playerSelection, computerSelection){
+    playerSelection=playerSelection.toLowerCase()
+    playerSelection=playerSelection.charAt(0).toUpperCase()+playerSelection.slice(1)
+    if(playerSelection==computerSelection){
+        return "Tie! Both had "+playerSelection
+    }
+    else if(playerSelection=='Rock'){
+        if(computerSelection=='Paper'){
+            return "You Lose! Paper beats Rock"
+        }else{
+            return "You Win! Rock beats Scissor"
+        }
+    }
+    else if(playerSelection=='Paper'){
+        if(computerSelection=='Rock'){
+            return "You Win! Paper beats Rock"
+        }else{
+            return "You Lose! Scissor beats Paper"
+        }
+    }
+    else if(playerSelection=='Scissor'){
+        if(computerSelection=='Paper'){
+            return "You Win! Scissor beats Paper"
+        }else{
+            return "You Lose! Rock beats Scissor"
+        }
     }
   }
   </script>
