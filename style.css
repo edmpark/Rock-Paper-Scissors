@@ -1,0 +1,31 @@
+.buttons{
+    display: flex;
+    flex: 1;
+    min-height: 0vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.Rock, .Paper, .Scissor{
+    border: .3rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    height: 2.7em;
+    width: 17rem;
+    font-size: 4em;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem black;
+}
+
+.score, .result{
+    text-indent: 1.45em;
+    text-align: center;
+    font-size: 3em;
+}
+
+
